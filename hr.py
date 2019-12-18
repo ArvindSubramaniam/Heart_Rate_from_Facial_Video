@@ -192,7 +192,7 @@ while(cap.isOpened()):
     g_std = green_ROI.std()
     r_std = red_ROI.std()
 
-    # Formulae from the paper "Self-adaptive Matrix Completion..."
+    # Formulae for modifying red, green and blue channels"
     R_n = red_ROI * r_std / r_mean
     G_n = green_ROI * g_std / g_mean
     X = 3 * R_n - 2 * G_n
